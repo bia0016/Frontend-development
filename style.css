@@ -9,12 +9,29 @@
     text-align: center;
 }
 .botoes{
-    color:#B8FAC8;
+    background-color: #CBD5E1;
+    color:#05001E;
+    border: #05001E;
+    border-radius: 5px;
+    box-shadow: #a7a7a7 0 1px 1px;
+    box-sizing: border-box;
+    width: 170px;
+    height: 30px;
+    font-size: 17px;
+    font: #000;
+    font-family: 'League Spartan';
+    cursor: pointer;
+    padding: 10px 10px;
 }
 body{
-    background-color: #CBD5E1;
+    background-color: #fff;
 }
-h1, h2, h3, h4, h5, h6, p{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+h1, h3, h4, h5, h6, p{
+    font-family: 'League Spartan';
     color:#05001E;
+}
+
+h2 {
+    font-family: 'League Spartan';
+    color:#05001E; 
 }
