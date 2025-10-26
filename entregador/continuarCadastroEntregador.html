@@ -1,3 +1,5 @@
+<!-- PAGINA CONCLUIDA -->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -7,16 +9,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>Cadastro para Entregador - Viva-Farma</title>
+    <title>Cadastro para Entregador | Viva-Farma</title>
 </head>
 
 <body>
     <header class="banner">
         <h1 style="font-size: 35px;">Viva-Farma</h1>
     </header>
-    <br><br>
 
     <div class="caixa">
+        <button class="voltar" onclick="history.back()">Voltar</button><br><br>
         <center>Continue seu cadastro:</center>
         <div class="form">
             <p><label for="telefone">Insira seu telefone com DDD (apenas números):</label><br>
@@ -25,16 +27,16 @@
             <input type="text" maxlength="11" id="endereco" name="endereco"></p>
             <p><label for="cep">Insira seu CEP (apenas números):</label><br>
             <input type="text" maxlength=8" id="cep" name="cep"></p>   
-            <p><label for="fotocnh">Insira foto da CNH:</label><br>
-            <input type="file" id="fotocnh" name="fotocnh" accept="image/*"></p>
-            <p><label for="fotorosto">Insira foto segurando a CNH:</label><br>
+            <p><label for="fotorosto">Insira foto sua segurando a CNH:</label><br>
             <input type="file" id="fotorosto" name="fotorosto" accept="image/*"></p>
+            <p><label for="senha">Crie sua senha:</label><br>
+            <input type="password" maxlength="50" id="senha" name="senha"></p>
 
             <input type="checkbox" id="termos" name="termos" value="Termos" class="checkbox-personalizado">
             <label for="termos">Li e concordo com os <b>Termos e Condições de Uso</b>.</label><br><br>
 
             <div class="botoes-container">
-                <a role="button" href="../index.html">
+                <a role="button" href="pagEntregador.html">
                     <button class="botoes">Finalizar cadastro</button>
                 </a><br><br>
             </div>

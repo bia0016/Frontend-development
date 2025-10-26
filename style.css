@@ -113,6 +113,17 @@ input[type="file"] {
     cursor: pointer;
 }
 
+input[type="password"] {
+    width: 300px;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #CBD5E1;
+    border-radius: 5px;
+    font-family: 'League Spartan';
+    outline: none;
+    box-shadow: 0 0 5px #5db0894d;
+}
+
 
 .checkbox-personalizado {
     width: 12px;
@@ -170,3 +181,211 @@ a:hover {
       align-items: center;
       box-shadow: 0 4px 6px rgb(55, 131, 19);
     }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #fff;
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /*Banner de cima*/
+    header {
+      background: #8ac2a2;
+      padding: 20px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      position: relative;
+      text-align: left;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .menu-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .profile-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .profile-info img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: white;
+      padding: 6px;
+    }
+
+    .profile-info h2 {
+      font-size: 1.1rem;
+    }
+
+    /*Informações do Perfil*/
+    .user-details {
+      padding: 20px;
+      margin-top: 10px;
+    }
+
+    .detail {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .detail i {
+      margin-right: 10px;
+      color: #333;
+    }
+
+    .detail span {
+      color: #666;
+    }
+
+    /*Pedidos*/
+    .orders-section {
+      padding: 20px;
+    }
+
+    .orders-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .orders-header i {
+      font-size: 1.2rem;
+    }
+
+    .status-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+      font-size: 0.8rem;
+    }
+
+    .status-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .entregue { background: #4caf50; }
+    .no-caminho { background: #2196f3; }
+    .esperando { background: #ff9800; }
+    .cancelado { background: #f44336; }
+
+    /* Os Produtos */
+    .cards-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      padding: 10px 0;
+    }
+
+    .card {
+      min-width: 120px;
+      background: white;
+      border-radius: 10px;
+      border: 2px solid #ddd;
+      text-align: center;
+      flex-shrink: 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 80%;
+      height: 80px;
+      object-fit: contain;
+      margin-top: 8px;
+    }
+
+    .card p {
+      font-size: 0.8rem;
+      padding: 6px;
+      color: #333;
+    }
+
+    .card.entregue { border-color: #4caf50; }
+    .card.no-caminho { border-color: #2196f3; }
+    .card.esperando { border-color: #ff9800; }
+    .card.cancelado { border-color: #f44336; }
+
+    /*Botões de Baixo*/
+    .bottom-nav {
+      background: #8ac2a2;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      margin-top: auto;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .bottom-nav i {
+      font-size: 1.3rem;
+      color: #000;
+      cursor: pointer;
+    }
+
+    /*Deixar Responsivo*/
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      .card {
+        min-width: 100px;
+      }
+    }
+.voltar {
+    background-color: #28332C;
+    color: #fff;;
+    border: none;
+    border-radius: 5px;
+    box-shadow: #a7a7a7 0 1px 1px;
+    box-sizing: border-box;
+    width: 90px;
+    height: 20px;
+    font-size: 13px;
+    font-family: 'League Spartan';
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.voltar:hover {
+    background-color: #3d4d43;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px #5db08933;
+}
