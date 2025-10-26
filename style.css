@@ -26,20 +26,35 @@
 body{
     background-color: #fff;
 }
-h1, h3, h4, h5, h6, p{
+h1{
     font-family: 'League Spartan';
     color:#05001E;
 }
-<<<<<<< HEAD
-=======
-
 h2 {
     font-family: 'League Spartan';
     color:#05001E; 
 }
-<<<<<<< HEAD
+h3{
+    font-family: 'League Spartan';
+    color:#05001E;
+}
+h4 {
+    font-family: 'League Spartan';
+    color:#05001E; 
+}
+h5 {
+    font-family: 'League Spartan';
+    color:#05001E; 
+}
+h6 {
+    font-family: 'League Spartan';
+    color:#05001E; 
+}
+p {
+    font-family: 'League Spartan';
+    color:#05001E; 
+}
 
-/* comentario */
-=======
->>>>>>> 0eec304f720687586a4543760d1119c50415474e
->>>>>>> 8d46033e397e3333c66fa4df7ff1d2675150d690
+
+
+
