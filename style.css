@@ -144,3 +144,26 @@ a:hover {
     color: #213f31;
     text-decoration: underline 1px #05001E;
 }
+
+.voltar {
+    background-color: #28332C;
+    color: #fff;;
+    border: none;
+    border-radius: 5px;
+    box-shadow: #a7a7a7 0 1px 1px;
+    box-sizing: border-box;
+    width: 90px;
+    height: 20px;
+    font-size: 13px;
+    font-family: 'League Spartan';
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.voltar:hover {
+    background-color: #3d4d43;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px #5db08933;
+}
