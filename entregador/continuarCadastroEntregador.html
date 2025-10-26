@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="icon" href="../img/favicon2.png" type="">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Cadastro para Entregador - Viva-Farma</title>
+</head>
+
+<body>
+    <header class="banner">
+        <h1 style="font-size: 35px;">Viva-Farma</h1>
+    </header>
+    <br><br>
+
+    <div class="caixa">
+        <center>Continue seu cadastro:</center>
+        <div class="form">
+            <p><label for="telefone">Insira seu telefone com DDD (apenas números):</label><br>
+            <input type="text" maxlength="11" id="telefone" name="telefone"></p>
+            <p><label for="endereco">Insira seu endereço:</label><br>
+            <input type="text" maxlength="11" id="endereco" name="endereco"></p>
+            <p><label for="cep">Insira seu CEP (apenas números):</label><br>
+            <input type="text" maxlength=8" id="cep" name="cep"></p>   
+            <p><label for="fotocnh">Insira foto da CNH:</label><br>
+            <input type="file" id="fotocnh" name="fotocnh" accept="image/*"></p>
+            <p><label for="fotorosto">Insira foto segurando a CNH:</label><br>
+            <input type="file" id="fotorosto" name="fotorosto" accept="image/*"></p>
+
+            <input type="checkbox" id="termos" name="termos" value="Termos" class="checkbox-personalizado">
+            <label for="termos">Li e concordo com os <b>Termos e Condições de Uso</b>.</label><br><br>
+
+            <div class="botoes-container">
+                <a role="button" href="../index.html">
+                    <button class="botoes">Finalizar cadastro</button>
+                </a><br><br>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</body>
+</html>
