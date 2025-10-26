@@ -5,41 +5,131 @@
     padding: 20px;
     border-radius: 20px;
 }
+
 .cadastro{
     text-align: center;
 }
+
 .botoes{
-    background-color: #CBD5E1;
-    color:#05001E;
-    border: #05001E;
+    background-color: #28332C;
+    color:#fff;
+    border: none;
     border-radius: 5px;
     box-shadow: #a7a7a7 0 1px 1px;
     box-sizing: border-box;
     width: 170px;
     height: 30px;
     font-size: 17px;
-    font: #000;
     font-family: 'League Spartan';
     cursor: pointer;
-    padding: 10px 10px;
+    padding: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
+
+.botoes:hover {
+    background-color: rgb(0, 72, 40);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(93, 176, 137, 0.2);
+}
+
+.botoes-container {
+    text-align: center;
+}
+
+.botoes-container .botoes {
+    display: inline-block;
+}
+
+b {
+    color:#5DB089;
+}
+
 body{
     background-color: #fff;
+    font-family: 'League Spartan';
 }
-h1, h3, h4, h5, h6, p{
+
+h1, p{
     font-family: 'League Spartan';
     color:#05001E;
 }
-<<<<<<< HEAD
-=======
 
 h2 {
     font-family: 'League Spartan';
     color:#05001E; 
 }
-<<<<<<< HEAD
 
-/* comentario */
-=======
->>>>>>> 0eec304f720687586a4543760d1119c50415474e
->>>>>>> 8d46033e397e3333c66fa4df7ff1d2675150d690
+h3 {
+    font-family: 'League Spartan';
+    color:#05001E; 
+}
+
+h4 {
+    font-family: 'League Spartan';
+    color:#05001E; 
+}
+h5 {
+    font-family: 'League Spartan';
+    color:#05001E; 
+}
+
+h6 {
+    font-family: 'League Spartan';
+    color:#05001E; 
+}
+
+.caixa {
+    width: 320px;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #CBD5E1;
+    border-radius: 15px;
+    box-shadow: 0 1px 6px #d5d5d5;
+    margin: auto;
+    
+}
+
+form {
+    font-family: 'League Spartan';
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #CBD5E1;
+    border-radius: 5px;
+    font-family: 'League Spartan';
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #28332C;
+    box-shadow: 0 0 5px #5db0894d;
+}
+
+input[type="file"] {
+    cursor: pointer;
+}
+
+
+.checkbox-personalizado {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    cursor: pointer;
+    accent-color: #5DB089;
+}
+
+a {
+    color: #2a5541;
+    transition: all 0.3s ease;
+    text-decoration: underline 0px transparent;
+}
+
+a:hover {
+    transform: translateY(-2px);
+    color: #213f31;
+    text-decoration: underline 1px #05001E;
+}
