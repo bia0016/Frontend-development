@@ -299,6 +299,110 @@ a:hover {
       border-radius: 50%;
     }
 
+    .status-dot.entregue {
+      background-color: #5DB089;
+    }
+
+    .status-dot.no-caminho {
+      background-color: #FFA500;
+    }
+
+    .status-dot.esperando {
+      background-color: #FFD700;
+    }
+
+    .status-dot.cancelado {
+      background-color: #FF6B6B;
+    }
+
+    .caixa-perfil {
+      width: 90%;
+      max-width: 800px;
+      height: auto;
+      padding: 20px;
+      border: 1px solid #CBD5E1;
+      border-radius: 15px;
+      box-shadow: 0 1px 6px #d5d5d5;
+      margin: 20px auto;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card, .card-no-caminho, .card-esperando, .card-cancelado {
+      border: 1px solid #CBD5E1;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(93, 176, 137, 0.4);
+      border-color: #5DB089;
+    }
+
+    .card-no-caminho:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(255, 165, 0, 0.4);
+      border-color: #FFA500;
+    }
+
+    .card-esperando:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(255, 215, 0, 0.4);
+      border-color: #FFD700;
+    }
+
+    .card-cancelado:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(255, 107, 107, 0.4);
+      border-color: #FF6B6B;
+    }
+
+    .card img, .card-no-caminho img, .card-esperando img, .card-cancelado img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .card p, .card-no-caminho p, .card-esperando p, .card-cancelado p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #28332C;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: space-around;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .bottom-nav i {
+      font-size: 24px;
+      color: #28332C;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .bottom-nav i:hover {
+      color: #5DB089;
+    }
+
     .entregue { background: #4caf50; }
     .no-caminho { background: #2196f3; }
     .esperando { background: #ff9800; }
