@@ -3,21 +3,93 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil</title>
+
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
+
+
     <link rel="icon" href="../img/favicon2.png" type="">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <title>Perfil do Usuário | Viva-Farma</title>
+
 </head>
+
 <body>
-    <header class="banner">
-        <h1 style="font-size: 35px; text-align: left;" >Meu Perfil</h1>
-    </header>
-    <div class="caixa">
-        <button class="voltar" onclick="history.back()">Voltar</button><br>
-        <hr>
-        <img src="../img/user.png" alt="foto" width="100" height="100">
+  <!--Banner de cima-->
+  <header class="banner">
+    <i class="fa-solid fa-bars menu-icon"></i>
+    <h1>Meu Perfil</h1>
+  </header>
+
+  <div class="caixa-perfil">
+    <button class="voltar" onclick="history.back()">Voltar</button>
+
+    <div class="profile-info">
+      <img src="../img/user.png" alt="Usuário" width="80" height="80">
+      <h2>Usuário</h2>
     </div>
+
+    <!--Informações do Perfil-->
+    <section class="user-details">
+    <div class="detail"><i class="fa-solid fa-phone"></i> <span>Telefone</span> <span>61 90000000</span></div>
+    <div class="detail"><i class="fa-solid fa-envelope"></i> <span>Email</span> <span>usuario.farmacia@gmail.com</span></div>
+    <div class="detail"><i class="fa-solid fa-location-dot"></i> <span>Endereço</span> <span>Qs 7 Areal, Brasília - DF</span></div>
+    <div class="detail"><i class="fa-regular fa-circle-user"></i> <span>Conta</span></div>
+  </section>
+
+  <!--Pedidos-->
+  <section class="orders-section">
+    <div class="orders-header">
+      <i class="fa-solid fa-truck"></i>
+      <h3>Pedidos</h3>
+    </div>
+
+    <div class="status-legend">
+      <div class="status-item"><div class="status-dot entregue"></div> Entregue</div>
+      <div class="status-item"><div class="status-dot no-caminho"></div> No Caminho</div>
+      <div class="status-item"><div class="status-dot esperando"></div> Esperando Pagamento</div>
+      <div class="status-item"><div class="status-dot cancelado"></div> Cancelado</div>
+    </div>
+
+    <div class="cards-container">
+      <div class="card entregue">
+        <img src="../img/GL-02.jpg" alt="Produto 1">
+        <p>Gel GL-02 Principia</p>
+      </div>
+      <div class="card no-caminho">
+        <img src="../img/Vit-D2000.png" alt="Produto 2">
+        <p>VitaminaD 2.000...</p>
+      </div>
+      <div class="card esperando">
+        <img src="../img/Dipirona.jpg" alt="Produto 3">
+        <p>Dipirona Monoidratada...</p>
+      </div>
+      <div class="card cancelado">
+        <img src="../img/Protetor-SolarAVON.jpg" alt="Produto 4">
+        <p>Protetor Solar Avo...</p>
+      </div>
+    </div>
+  </section>
+
+  <nav class="bottom-nav">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <i class="fa-solid fa-house"></i>
+    <i class="fa-solid fa-user"></i>
+  </nav>
+
+
+
+
 </body>
 </html>
+
