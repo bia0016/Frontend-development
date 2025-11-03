@@ -1,15 +1,11 @@
 .banner{
-    background-color: #67B99A;
-    color: white;
-    padding: 20px;
+    background-color: #5DB089;
     text-align: center;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
 }
+/*alterou somente o banner*/
 
 .cadastro{
     text-align: center;
