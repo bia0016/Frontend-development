@@ -1,234 +1,85 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Viva-Farma</title>
-  <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
-
-    body {
-      background-color: #f8f8f8;
-    }
-
-    /* Cabeçalho */
-    header {
-      background-color: #8cc7b5;
-      color: #fff;
-      text-align: center;
-      padding: 30px 20px 60px 20px;
-      position: relative;
-      border-bottom-left-radius: 50px;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      color: #0c1a1a;
-    }
-
-    .menu-icon {
-      position: absolute;
-      top: 30px;
-      right: 40px;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    .search-bar {
-      position: absolute;
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60%;
-      display: flex;
-      align-items: center;
-      background: white;
-      border-radius: 20px;
-      padding: 5px 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .search-bar input {
-      border: none;
-      outline: none;
-      width: 100%;
-      padding: 8px;
-      font-size: 1em;
-    }
-
-    .search-bar button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 18px;
-    }
-
-    /* Conteúdo principal */
-    main {
-      padding: 60px 10% 100px;
-    }
-
-    h2 {
-      margin: 30px 0 15px;
-      color: #222;
-    }
-
-    /* Seções com ícones */
-    .category-list,
-    .order-list,
-    .pharmacy-list {
-      display: flex;
-      gap: 20px;
-      overflow-x: auto;
-      padding-bottom: 10px;
-    }
-
-    .category-item,
-    .order-item,
-    .pharmacy-item {
-      flex: 0 0 130px;
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      text-align: center;
-      padding: 15px;
-      transition: 0.3s;
-    }
-
-    .category-item:hover,
-    .order-item:hover,
-    .pharmacy-item:hover {
-      transform: translateY(-5px);
-    }
-
-    .category-item img,
-    .order-item img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 8px;
-    }
-
-    .pharmacy-item img {
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-      margin-bottom: 10px;
-    }
-
-    .category-item p,
-    .order-item p,
-    .pharmacy-item p {
-      font-size: 0.9em;
-      color: #333;
-    }
-
-    /* Rodapé fixo */
-    footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #8cc7b5;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 10px 0;
-    }
-
-    footer i {
-      font-size: 22px;
-      color: #000;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    footer i:hover {
-      color: white;
-    }
-  </style>
-
-  <!-- Ícones (Font Awesome) -->
-  <script src="https://kit.fontawesome.com/a2d9d6b6a3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
   <header>
     <h1>Viva-Farma</h1>
-    <div class="menu-icon"><i class="fas fa-bars"></i></div>
-
     <div class="search-bar">
       <input type="text" placeholder="Buscar por medicamentos e farmácias...">
-      <button><i class="fas fa-search"></i></button>
     </div>
   </header>
 
   <main>
     <h2>O que você precisa hoje?</h2>
-    <div class="category-list">
-      <div class="category-item">
-        <img src="imag\med1.jpg" alt="">
+    <div class="cards-container">
+      <div class="card">
+        <img src="imag/med1.jpg" alt="Medicamentos">
         <p>Medicamentos</p>
       </div>
-      <div class="category-item">
-        <img src="imag\cos01.jpg" alt="">
+      <div class="card">
+        <img src="imag/cos01.jpg" alt="Cosméticos">
         <p>Cosméticos</p>
       </div>
-      <div class="category-item">
-        <img src="imag\vita03.jpg" alt="">
+      <div class="card">
+        <img src="imag/vita03.jpg" alt="Vitaminas">
         <p>Vitaminas</p>
       </div>
-      <div class="category-item">
-        <img src="imag\baby01.jpg" alt="">
+      <div class="card">
+        <img src="imag/baby01.jpg" alt="Maternidade">
         <p>Maternidade</p>
       </div>
     </div>
 
     <h2>Principais pedidos</h2>
-    <div class="order-list">
-      <div class="order-item">
-        <img src="" alt="">
+    <div class="cards-container">
+      <div class="card">
+        <img src="imag/med1.jpg" alt="Medicamentos">
         <p>Medicamentos</p>
       </div>
-      <div class="order-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/6839/6839062.png" alt="">
+      <div class="card">
+        <img src="imag/bele1.jpg" alt="Beleza">
         <p>Beleza</p>
       </div>
-      <div class="order-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/808/808569.png" alt="">
+      <div class="card">
+        <img src="imag/hig1.jpg" alt="Higiene">
         <p>Higiene</p>
       </div>
     </div>
 
     <h2>Principais farmácias</h2>
-    <div class="pharmacy-list">
-      <div class="pharmacy-item">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Drogasil_logo.png" alt="">
+    <div class="cards-container">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2966/2966468.png" alt="Drogasil">
         <p>Drogasil</p>
       </div>
-      <div class="pharmacy-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/1246/1246270.png" alt="">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Popular">
         <p>Popular</p>
       </div>
-      <div class="pharmacy-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1032/1032971.png" alt="Drogafuji">
         <p>Drogafuji</p>
       </div>
-      <div class="pharmacy-item">
-        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" alt="">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1041/1041878.png" alt="Bem">
         <p>Bem</p>
       </div>
     </div>
   </main>
 
-  <footer>
-    <i class="fas fa-shopping-cart"></i>
-    <i class="fas fa-home"></i>
-    <i class="fas fa-user"></i>
+  <footer class="bottom-menu">
+    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+    <a href="#" class="active"><i class="fa-solid fa-house"></i></a>
+    <a href="#"><i class="fa-solid fa-user"></i></a>
   </footer>
+
 </body>
 </html>
