@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/favicon2.png" type="">
+    <link rel="stylesheet" href="https:/cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https:/fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap">
+    <title>Medicamentos | Viva-Farma</title>
+    <style>
+      .navbar-search { margin-right: 20px; display:flex; gap:0.5rem; align-items:center; }
+      .navbar-search .form-control { width: 520px; max-width: 20vw; font-family: 'League Spartan'; }
+      @media (max-width: 768px) {
+        .navbar-search .form-control { width: 200px; max-width: 50vw; }
+      }
+
+      .navbar-nav .nav-link {
+        font-family: 'League Spartan';
+        font-size: 20px;
+                         /* estado normal */
+        transition: font-weight 180ms ease, transform 160ms ease;
+        will-change: font-weight, transform;
+        cursor: pointer;
+      }
+
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link:focus {
+        font-weight: 700;                /* fica mais grosso ao hover */
+        transform: translateY(-2px);     /* leve elevação opcional para destaque */
+      }
+      .custom-button {
+        height: fit-content;
+        align-self: center;
+        padding: 10px 20px;
+        margin: auto;
+        transition: transform 200ms ease;
+      }
+
+      .custom-button:hover {
+          transform: translateY(-2px);
+      }
+
+      /* Ajuste do container dos cards */
+      .cards-row {
+          display: flex;
+          gap: 20px;
+          flex-wrap: wrap;
+          align-items: center; /* alinha items verticalmente ao centro */
+          justify-content: center; /* centraliza horizontalmente */
+          padding: 0 20px 20px 20px;
+      }
+        /* ...existing styles... */
+
+        /* container que alinha os cards na mesma linha */
+        .cards-row {
+          display: flex;
+          gap: 20px;                /* espaçamento entre cards */
+          flex-wrap: wrap;          /* quebra em telas pequenas */
+          align-items: flex-start;
+          padding: 0 20px 20px 20px;/* espaço leve da borda da tela */
+        }
+
+        /* card menor, sem margem (o espaçamento fica no container) */
+        .custom-card {
+          width: 14rem;
+          max-width: calc(100% - 40px);
+          margin: 0;                /* removido para controle pelo container */
+          border-radius: 15px;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+          overflow: hidden;
+          background-color: #fff;
+          transition: transform 250ms ease, box-shadow 250ms ease;
+          will-change: transform;
+          cursor: pointer;
+        }
+
+        .custom-card:hover,
+        .custom-card:focus-within {
+          transform: translateY(-6px) scale(1.03);
+          box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .custom-card .card-img-top {
+          transition: transform 350ms ease;
+          transform-origin: center;
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+
+        .custom-card:hover .card-img-top,
+        .custom-card:focus-within .card-img-top {
+          transform: scale(1.06);
+        }
+
+        .custom-card .btn {
+          transition: transform 200ms ease, box-shadow 200ms ease;
+        }
+        .custom-card:hover .btn {
+          transform: translateY(-2px);
+        }
+
+        @media (max-width: 576px) {
+          .custom-card {
+            width: 90%;
+            margin: 12px auto;
+          }
+          .custom-card:hover {
+            transform: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+          }
+          .custom-card .card-img-top { transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-sucess" class="navbar" style="background-color: #5DB089;" data-bs-theme="light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="margin: 20px; font-family: 'League Spartan'; font-weight: 500; font-size: 30px; pointer-events: none;">Viva-Farma</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/pasta1/homepage2.html" style="font-family: 'League Spartan'; font-size: 20px;">Página Inicial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="font-family: 'League Spartan'; font-size: 20px;">Meus Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="font-family: 'League Spartan'; font-size: 20px;">Estoque</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="font-family: 'League Spartan'; font-size: 20px;">Análise Receitas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="font-family: 'League Spartan'; font-size: 20px;">Chat</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active" aria-current="page" href="#" style="font-family: 'League Spartan'; font-size: 20px;">Meu Perfil</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                <form class="d-flex navbar-search ms-auto" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar por medicamentos..." aria-label="Search" style="margin: 20px; font-family: 'League Spartan';"/>
+                    <button class="btn btn-outline-success" style="margin: 20px; font-family: 'League Spartan'; color: white; border: white;" type="submit">Pesquisar</button>
+                </form>
+                </div>
+        </div>
+    </nav>
+        <h4 style="margin: 20px; font-family: 'League Spartan'; color:#05001E; font-weight: 400;">Os mais vendidos</h4>
+
+  <div class="cards-row">
+      <div class="card custom-card">
+
+        <a href="/pasta1/contrador.html">
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Dipirona Monoidratada</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Medicamentos</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="card custom-card">
+        <a href="/pasta1/contrador.html">
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Insulina</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Medicamentos</p>
+          </div>
+        </a>
+      </div>
+      
+
+      <div class="card custom-card">
+            
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Creatina</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Suplementos</p>
+          </div>
+      </div>
+
+      <div class="card custom-card">
+            
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Zolpidem</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Medicamentos</p>
+          </div>
+      </div>
+      <div class="card custom-card">
+            
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Zolpidem</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Medicamentos</p>
+          </div>
+      </div>
+       <button type="button" class="btn btn-success custom-button" style="font-family: 'League Spartan';">Ver mais</button>
+  </div>
+
+      <h4 style="margin: 20px; font-family: 'League Spartan'; color:#05001E; font-weight: 400;">Vendas para entrega</h4>
+
+  <div class="cards-row">
+      <div class="card custom-card">
+            
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Ibuprofeno</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Pedido: #aaaa000</p>
+          </div>
+      </div>
+
+      <div class="card custom-card">
+            
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Azitromicina</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Pedido: #bbbb111</p>
+          </div>
+      </div>
+
+      <div class="card custom-card">
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Ciprofloxacino</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Pedido: #cccc222</p>
+          </div>
+      </div>
+
+      <div class="card custom-card">
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Cefalexina</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Pedido: #dddd333</p>
+          </div>
+      </div>
+      <div class="card custom-card">
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Cefalexina</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Pedido: #dddd333</p>
+          </div>
+      </div>
+       <button type="button" class="btn btn-success custom-button" style="font-family: 'League Spartan';">Ver mais</button>
+  </div>
+
+  <h4 style="margin: 20px; font-family: 'League Spartan'; color:#05001E; font-weight: 400;">Receitas pendentes para análise</h4>
+
+  <div class="cards-row">
+      <div class="card custom-card">
+          
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Insulina</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Pendente: #eeee444</p>
+          </div>
+      </div>
+
+      <div class="card custom-card">
+          
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Levotiroxina</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Pendente: #ffff555</p>
+          </div>
+      </div>
+
+      <div class="card custom-card">
+          
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Estradiol</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Pendente: #ggggg66</p>
+          </div>
+      </div>
+
+      <div class="card custom-card">
+          
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Pílulas Anticoncepcionais</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Pendente: #hhhh777</p>
+          </div>
+      </div>
+      <div class="card custom-card">
+          
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Pílulas Anticoncepcionais</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Pendente: #hhhh777</p>
+          </div>
+      </div>
+       <button type="button" class="btn btn-success custom-button" style="font-family: 'League Spartan';">Ver mais</button>
+  </div>
+
+  <h4 style="margin: 20px; font-family: 'League Spartan'; color:#05001E; font-weight: 400;">Acompanhe seu estoque</h4>
+
+    <div class="cards-row">
+      <div class="card custom-card">   
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Dipirona Monoidratada</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Qtd: +20 pacotes</p>
+          </div>
+      </div>
+
+      <div class="card custom-card">   
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Oseltamivir</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Qtd: -25 caixas</p>
+          </div>
+      </div>
+
+      <div class="card custom-card">
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Zolpidem</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Qtd: +15 caixas</p>
+          </div>
+      </div>
+
+      <div class="card custom-card">
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Mounjaro</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Qtd: -10 pacotes</p>
+          </div>
+      </div>
+      <div class="card custom-card">
+          <div class="card-body">
+              <a href="#" class="btn btn-primary" style="font-family: 'League Spartan'; background-color: #fff; color: #05001E; border: #fff;">Mounjaro</a>
+              <p style="font-family: 'League Spartan'; margin-left: 13px; font-weight: 300;">Qtd: -10 pacotes</p>
+          </div>
+      </div>
+       <button type="button" class="btn btn-success custom-button" style="font-family: 'League Spartan';">Ver mais</button>
+  </div>
+
+    </body>
+    </html>
